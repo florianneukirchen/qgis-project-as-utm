@@ -13,7 +13,7 @@ repository=https://github.com/florianneukirchen/qgis-project-as-utm
 
 # Tags are comma separated with spaces allowed
 tags=vector, crs, utm
-# homepage=https://www.riannek.de/
+homepage=https://github.com/florianneukirchen/qgis-project-as-utm
 
 
 # experimental flag
