@@ -12,7 +12,7 @@ repository=https://github.com/florianneukirchen/qgis-project-as-utm
 
 
 # Tags are comma separated with spaces allowed
-tags=vector, crs, utm
+tags=vector, crs, utm, projection, python, project
 homepage=https://github.com/florianneukirchen/qgis-project-as-utm
 
 
