@@ -16,7 +16,7 @@ Or checkout / copy the source code into your QGIS plugin folder.
 
 ## Changelog
 ### 0.2 (2022-09)
-- Now it works also on layers that are not in WGS84 ...
+- Now it also works on layers that are not in WGS84 ...
 - Do not crash if pyproj did not return any CRS. 
 - Fix typo
 ### 0.1 (2022-09)
