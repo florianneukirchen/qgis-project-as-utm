@@ -32,17 +32,28 @@ class ProjectUTM:
 
     def run(self):
         layer = iface.activeLayer()
-        ext = layer.extent()
+        center = layer.extent().center()
+
+        # Make shure the coordinate of the query is in WGS84        
+        wgs84 = QgsCoordinateReferenceSystem(4326)
+        if layer.crs() != wgs84:
+            geom = QgsGeometry.fromPointXY(center)
+            tr = QgsCoordinateTransform(layer.crs(), wgs84, QgsProject.instance())
+            geom.transform(tr)
+            center = geom.asPoint() 
+
+        # Look up in the database
         utm_crs_list = query_utm_crs_info(
             datum_name="WGS 84",
             area_of_interest=AreaOfInterest(
-            west_lon_degree=ext.center().x(),
-            south_lat_degree=ext.center().y(),
-            east_lon_degree=ext.center().x(),
-            north_lat_degree=ext.center().y(),
+            west_lon_degree=center.x(),
+            south_lat_degree=center.y(),
+            east_lon_degree=center.x(),
+            north_lat_degree=center.y(),
             ),
         )
-        
+
+        # Do not crash if no CRS was returned        
         if len(utm_crs_list) == 0:
             iface.messageBar().pushInfo('UTM', 'Please try with another layer, pyproj did not return a matching CRS.')
             utm_crs = None
