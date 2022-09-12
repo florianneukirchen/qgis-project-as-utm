@@ -13,7 +13,6 @@ from qgis.core import *
 from qgis.PyQt.QtGui import *
 from qgis.PyQt.QtWidgets import *
 from qgis.utils import iface
-#from PyQt5.QtWidgets import QAction
 from pyproj import CRS
 from pyproj.aoi import AreaOfInterest
 from pyproj.database import query_utm_crs_info
@@ -43,14 +42,17 @@ class ProjectUTM:
             north_lat_degree=ext.center().y(),
             ),
         )
-        utm_crs = QgsCoordinateReferenceSystem("EPSG:" + utm_crs_list[0].code)
+        
+        if len(utm_crs_list) == 0:
+            iface.messageBar().pushInfo('UTM', 'Please try with another layer, pyproj did not return a matching CRS.')
+            utm_crs = None
+        else:
+            utm_crs = QgsCoordinateReferenceSystem("EPSG:" + utm_crs_list[0].code)
 
-  
-
-        if utm_crs.isValid() and utm_crs != QgsProject.instance().crs():
-            QgsProject.instance().setCrs(utm_crs)
-            iface.messageBar().pushInfo('UTM', 'Changed Project CRS to ' +
-                utm_crs.description())
+            if utm_crs.isValid() and utm_crs != QgsProject.instance().crs():
+                QgsProject.instance().setCrs(utm_crs)
+                iface.messageBar().pushInfo('UTM', 'Changed Project CRS to ' +
+                    utm_crs.description())
        
 
 

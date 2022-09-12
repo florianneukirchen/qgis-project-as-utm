@@ -2,7 +2,7 @@
 name=ProjectUTM
 description=Set CRS of the Project to the UTM Zone of the area.
 about=Set CRS of the Project to the UTM Zone corresponding to the center
-     of the extent of the active layer.
+     of the extend of the active layer.
 version=0.1
 qgisMinimumVersion=3.0
 author=Florian Neukirchen
@@ -12,8 +12,8 @@ repository=https://github.com/florianneukirchen/qgis-project-as-utm
 
 
 # Tags are comma separated with spaces allowed
-tags=vector, crs, utm, projection, python, project
-homepage=https://github.com/florianneukirchen/qgis-project-as-utm
+tags=vector, crs, utm
+# homepage=https://www.riannek.de/
 
 
 # experimental flag
