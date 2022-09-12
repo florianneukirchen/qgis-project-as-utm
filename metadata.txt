@@ -3,7 +3,7 @@ name=ProjectUTM
 description=Set CRS of the Project to the UTM Zone of the area.
 about=Set CRS of the Project to the UTM Zone corresponding to the center
      of the extend of the active layer.
-version=0.1
+version=0.2
 qgisMinimumVersion=3.0
 author=Florian Neukirchen
 email=mail@riannek.de
