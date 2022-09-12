@@ -18,7 +18,7 @@ changelog=0.2
 
 # Tags are comma separated with spaces allowed
 tags=vector, crs, utm
-homepage=https://www.riannek.de/code-de/qgis-plugin-projectutm/
+homepage=https://www.riannek.de/code/qgis-plugin-projectutm/
 
 
 # experimental flag
