@@ -25,4 +25,4 @@ homepage=https://www.riannek.de/code/qgis-plugin-projectutm/
 
 
 # experimental flag
-# experimental=True
+experimental=False
