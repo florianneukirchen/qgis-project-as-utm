@@ -10,7 +10,9 @@ email=mail@riannek.de
 tracker= https://github.com/florianneukirchen/qgis-project-as-utm/issues
 repository=https://github.com/florianneukirchen/qgis-project-as-utm
 
-changelog=0.2 
+changelog=1.0
+    - Warn if the layer extent is not fully within the UTM zone.
+    0.2 
     - Now it also works on layers in any CRS, not only WGS84 ...
     - Do not crash if pyproj did not return any CRS
     0.1 (2022-09)

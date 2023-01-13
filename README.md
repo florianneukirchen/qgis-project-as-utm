@@ -15,9 +15,12 @@ Or checkout / copy the source code into your QGIS plugin folder.
 
 
 ## Changelog
+### 1.0 (?????)
+- Warn if layer extent is not fully within UTM zone
+
 ### 0.2 (2022-09)
 - Now it also works on layers that are not in WGS84 ...
-- Do not crash if pyproj did not return any CRS. 
+- Do not crash if pyproj did not return any CRS
 - Fix typo
 ### 0.1 (2022-09)
 - Initial version

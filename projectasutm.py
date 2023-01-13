@@ -53,17 +53,36 @@ class ProjectUTM:
             ),
         )
 
+        # Check if the extend is fully within UTM Zone
+        ext = layer.extent()
+        utm_crs_list2 = query_utm_crs_info(
+            datum_name="WGS 84",
+            area_of_interest=AreaOfInterest(
+            west_lon_degree=ext.xMinimum(),
+            south_lat_degree=ext.yMinimum(),
+            east_lon_degree=ext.xMaximum(),
+            north_lat_degree=ext.yMaximum(),
+            ),
+            contains=True
+        )
+        within = len(utm_crs_list2)
+        # (is 1 if within, 0 if not within)
+
         # Do not crash if no CRS was returned        
         if len(utm_crs_list) == 0:
-            iface.messageBar().pushInfo('UTM', 'Please try with another layer, pyproj did not return a matching CRS.')
+            iface.messageBar().pushWarning('UTM', 'Please try with another layer, pyproj did not return a matching CRS.')
             utm_crs = None
         else:
             utm_crs = QgsCoordinateReferenceSystem("EPSG:" + utm_crs_list[0].code)
 
             if utm_crs.isValid() and utm_crs != QgsProject.instance().crs():
                 QgsProject.instance().setCrs(utm_crs)
-                iface.messageBar().pushInfo('UTM', 'Changed Project CRS to ' +
-                    utm_crs.description())
+                if within > 0:
+                    iface.messageBar().pushInfo('UTM', 'Changed Project CRS to ' +
+                        utm_crs.description())
+                else:
+                    iface.messageBar().pushWarning('UTM', 'Changed Project CRS to ' +
+                        utm_crs.description() + ', but the layer extend is not fully within this UTM zone.')
        
 
 
