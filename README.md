@@ -1,5 +1,5 @@
 # qgis-project-as-utm
-QGIS Plugin to set CRS of the Project to the UTM Zone of the area. It takes the central point of the extend of the active layer to look up the corresponding UTM Zone in the pyproj database. Finally the CRS of the project is set.
+QGIS Plugin to set CRS of the Project to the UTM Zone of the area. It takes the central point of the extent of the active layer to look up the corresponding UTM Zone in the pyproj database. Finally the CRS of the project is set.
 
 - Homepage: [https://www.riannek.de/code/qgis-plugin-projectutm/](https://www.riannek.de/code/qgis-plugin-projectutm/)
 - QGIS Plugins Repository: [https://plugins.qgis.org/plugins/qgis-project-as-utm/](https://plugins.qgis.org/plugins/qgis-project-as-utm/)
