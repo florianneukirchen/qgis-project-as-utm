@@ -15,7 +15,7 @@ Or checkout / copy the source code into your QGIS plugin folder.
 
 
 ## Changelog
-### 1.0 (?????)
+### 1.0 (2023-01)
 - Warn if layer extent is not fully within UTM zone
 
 ### 0.2 (2022-09)
