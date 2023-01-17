@@ -15,6 +15,8 @@ Or checkout / copy the source code into your QGIS plugin folder.
 
 
 ## Changelog
+### 1.1 (2023-01)
+- Set QGIS Minimum Version to 3.18 (the plugin requires pyproj >= 3.0.0) 
 ### 1.0 (2023-01)
 - Warn if layer extent is not fully within UTM zone
 

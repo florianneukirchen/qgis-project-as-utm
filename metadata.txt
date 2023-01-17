@@ -3,14 +3,15 @@ name=ProjectUTM
 description=Set CRS of the Project to the UTM Zone of the area.
 about=Set CRS of the Project to the UTM Zone corresponding to the center
      of the extend of the active layer.
-version=1.0
-qgisMinimumVersion=3.0
+version=1.1
+qgisMinimumVersion=3.18
 author=Florian Neukirchen
 email=mail@riannek.de
 tracker= https://github.com/florianneukirchen/qgis-project-as-utm/issues
 repository=https://github.com/florianneukirchen/qgis-project-as-utm
 
-changelog=1.0
+changelog=1.1 Set QGIS Minimum Version to 3.18 (the plugin requires pyproj >= 3.0.0)
+    1.0
     - Warn if the layer extent is not fully within the UTM zone.
     0.2 
     - Now it also works on layers in any CRS, not only WGS84 ...
