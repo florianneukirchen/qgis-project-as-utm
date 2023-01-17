@@ -9,7 +9,7 @@ QGIS Plugin to set CRS of the Project to the UTM Zone of the area. It takes the 
 Select a layer that only contains features within the area of interest, e.g. an opened GPX track. Press the UTM Button in the Plugins Toolbar.
 
 ## Install
-You can install the plugin with the extension manager in QGIS.
+You can install the plugin with the extension manager in QGIS. Requires pyproj >= 3.0.0 (coming with QGIS >= 3.18).
 
 Or checkout / copy the source code into your QGIS plugin folder.
 
