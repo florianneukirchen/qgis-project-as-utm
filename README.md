@@ -6,7 +6,7 @@ QGIS Plugin to set CRS of the Project to the UTM Zone of the area. It takes the 
 - Git: [https://github.com/florianneukirchen/qgis-project-as-utm](https://github.com/florianneukirchen/qgis-project-as-utm)
 
 ![QGIS plugin Project as UTM](screencast.gif)
-*QGIS Plugin Project as UTM (example map: data © [OpenStreetMap](https://www.openstreetmap.org/copyright/en))*
+*Use the plugin to set the QGIS project to UTM (example map: data © [OpenStreetMap](https://www.openstreetmap.org/copyright/en))*
 
 ## Usage 
 Select a layer that only contains features within the area of interest, e.g. an opened GPX track. Press the UTM Button in the Plugins Toolbar.
