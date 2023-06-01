@@ -34,8 +34,8 @@ class ProjectUTM:
         layer = iface.activeLayer()
         center = layer.extent().center()
 
-        # Make shure the coordinate of the query is in WGS84        
-        wgs84 = QgsCoordinateReferenceSystem(4326)
+        # Makehure the coordinate of the query is in WGS84        
+        wgs84 = QgsCoordinateReferenceSystem("EPSG:4326")
         if layer.crs() != wgs84:
             geom = QgsGeometry.fromPointXY(center)
             tr = QgsCoordinateTransform(layer.crs(), wgs84, QgsProject.instance())
