@@ -70,7 +70,7 @@ class ProjectUTM:
 
         # Do not crash if no CRS was returned        
         if len(utm_crs_list) == 0:
-            iface.messageBar().pushWarning('UTM', 'Please try with another layer, pyproj did not return a matching CRS.')
+            iface.messageBar().pushWarning('UTM', 'Pyproj did not return a valid CRS.')
             utm_crs = None
         else:
             utm_crs = QgsCoordinateReferenceSystem("EPSG:" + utm_crs_list[0].code)
