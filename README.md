@@ -18,7 +18,7 @@ Or clone / copy the source code into your QGIS plugin folder.
 
 
 ## Changelog
-### 1.2 (???)
+### 1.2 (2024-09)
 - Do not crash if no layer is active
 ### 1.1 (2023-01)
 - Set QGIS Minimum Version to 3.18 (the plugin requires pyproj >= 3.0.0) 
