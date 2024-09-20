@@ -32,9 +32,15 @@ class ProjectUTM:
 
     def run(self):
         layer = iface.activeLayer()
+
+        if not layer:
+            iface.messageBar().pushWarning('UTM', "No active Layer")
+            return
+
+
         center = layer.extent().center()
 
-        # Makehure the coordinate of the query is in WGS84        
+        # Make shure the coordinate of the query is in WGS84        
         wgs84 = QgsCoordinateReferenceSystem("EPSG:4326")
         if layer.crs() != wgs84:
             geom = QgsGeometry.fromPointXY(center)
