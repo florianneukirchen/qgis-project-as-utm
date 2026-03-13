@@ -18,9 +18,10 @@ Or clone / copy the source code into your QGIS plugin folder.
 
 
 ## Changelog
-
+### 1.4 (2026-03)
+- Support QGIS 4.x
 ### 1.3 (2025-07)
-- Support Qt6 / QGIS 4
+- Support Qt6 
 ### 1.2 (2024-09)
 - Do not crash if no layer is active
 ### 1.1 (2023-01)

@@ -5,14 +5,16 @@ about=Set CRS of the Project to the UTM Zone corresponding to the center
      of the extend of the active layer.
 version=1.3
 qgisMinimumVersion=3.18
-supportsQt6=True
+qgisMaximumVersion=4.99
 author=Florian Neukirchen
 email=mail@riannek.de
 tracker= https://github.com/florianneukirchen/qgis-project-as-utm/issues
 repository=https://github.com/florianneukirchen/qgis-project-as-utm
 
-changelog=1.3
-    - Support Qt6 / QGIS 4
+changelog=1.4
+    - Support QGIS 4.x 
+    1.3
+    - Support Qt6 
     1.2
     - Do not crash if no layer is active
     1.1 
